@@ -73,7 +73,7 @@ const Sidebar = ({ expand, setExpand }) => {
             New Chat
             <div className="w-3 h-3 absolute bg-black rotate-45 left-4 -bottom-1.5"></div>
           </div>
-          {expand && <p className="text-white text font-medium">Ne Chat</p>}
+          {expand && <p className="text-white text font-medium">New Chat</p>}
         </button>
 
         <div
