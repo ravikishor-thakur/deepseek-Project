@@ -32,8 +32,8 @@ import toast from 'react-hot-toast';
 
          const userPrompt = {
           role: "user",
-          Content: prompt,
-          timestamp: Date.now(),
+          content: prompt,
+          timestamps: Date.now(),
          }
          // saving user prompt in chats array
          setChats((prevChats)=> prevChats.map((chat)=> chat._id === selectedChat._id ? 
@@ -62,7 +62,7 @@ import toast from 'react-hot-toast';
                   let assistantMessage = {
                     role: 'assistant',
                     content: "",
-                    timestamp: Date.now(),
+                    timestamps: Date.now(),
                   }
 
                   setSelectedChat((prev) => ({
