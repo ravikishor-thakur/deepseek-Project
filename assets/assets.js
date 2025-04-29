@@ -20,6 +20,7 @@ import sidebar_icon from "./sidebar_icon.svg";
 import sidebar_close_icon from "./sidebar_close_icon.svg";
 import chat_icon_dull from "./chat_icon_dull.svg";
 import qrcode from "./qrcode.png";
+import new_qr_code from "./new_qr_code.png";
 import three_dots from "./three_dots.svg";
 import new_icon from "./new_icon.svg";
 
@@ -46,6 +47,7 @@ export const assets = {
   sidebar_close_icon,
   chat_icon_dull,
   qrcode,
+  new_qr_code,
   three_dots,
   new_icon,
 };
