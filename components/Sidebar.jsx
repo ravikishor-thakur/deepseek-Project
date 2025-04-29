@@ -108,7 +108,7 @@ const Sidebar = ({ expand, setExpand }) => {
             } opacity-0 group-hover:opacity-100 hidden group-hover:block transition`}
           >
             <div className="relative w-max bg-black text-white text-sm p-3 rounded-lg">
-              <Image src={assets.like_icon} alt="" className="w-44" />
+              <Image src={assets.new_qr_code} alt="" className="w-44" />
               <p>Scan to get DeepSeek App</p>
               <div
                 className={`w-3 h-3 absolute bg-black rotate-45 ${
