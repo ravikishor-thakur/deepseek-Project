@@ -4,8 +4,8 @@
   --color-primary: #4d6bfe;
 }
 
-html {
-   @apply scroll-smooth;
+html{
+  @apply scroll-smooth;
 }
 
 ::-webkit-scrollbar{
@@ -21,6 +21,7 @@ html {
 code{
   white-space: pre-wrap !important;
 }
- pre{
-   border-radius: 10px !important;
- }
+
+pre{
+  border-radius: 10px !important;
+}

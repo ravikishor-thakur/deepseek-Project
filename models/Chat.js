@@ -7,14 +7,14 @@ const ChatSchema = new mongoose.Schema(
             {
                 role: {type: String, required: true},
                 content: {type: String, required: true},
-                timestamps: {type: Number, required: true},
+                timestamp: {type: Number, required: true},
             },
         ],
-        userId:  {type: String, required: true},
+        userId: {type: String, required: true},
     },
     {timestamps: true}
 );
- 
+
 const Chat = mongoose.models.Chat || mongoose.model("Chat", ChatSchema)
 
 export default Chat;
