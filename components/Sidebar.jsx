@@ -26,7 +26,7 @@ const Sidebar = ({ expand, setExpand }) => {
         >
           <Image
             className={expand ? "W-36" : "w-10  cursor-pointer"}
-            src={expand ? assets.logo_text :assets.new_logoo}
+            src={expand ? assets.logo_text :assets.logo_icon}
             alt=""
           />
 
