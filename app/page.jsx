@@ -44,15 +44,16 @@ export default function RestrictedPage() {
     alignItems: 'center',
     flexDirection: 'column',
     height: '775px',
-    backgroundColor: '#000000', // white background
+    backgroundColor: 'black', // white background
     textAlign: 'center',
   };
   
   const headingStyle = {
-    fontSize: '60px',
+    fontSize: '30px',
     color: 'red',
     fontWeight: '70', // extra bold
     marginBottom: '10px',
+  
   };
 
   
@@ -61,7 +62,8 @@ export default function RestrictedPage() {
     fontSize: '20px',
     color: '#0F8665',
     fontWeight: '400', // extra bold
-    height: '600'
+    //height: '600',
+    
   };
   const sh ={
      color: 'red',
@@ -69,7 +71,7 @@ export default function RestrictedPage() {
      justifyContent: 'center',
      alignItems: 'center',
      flexDirection: 'column',
-     height: '400px',
+     //height: '400px',
      backgroundColor: 'black', // white background
    
    
