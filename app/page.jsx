@@ -43,36 +43,43 @@ export default function RestrictedPage() {
     justifyContent: 'center',
     alignItems: 'center',
     flexDirection: 'column',
-    height: '100vh',
+    height: '375px',
     backgroundColor: '#000000', // white background
     textAlign: 'center',
-   
-      
-    
-    
-    
   };
   
   const headingStyle = {
-    fontSize: '3rem',
+    fontSize: '60px',
     color: 'red',
-    fontWeight: '400', // extra bold
-    marginBottom: '15px',
+    fontWeight: '70', // extra bold
+    marginBottom: '10px',
   };
 
   
 
   const newstyle = {
-    fontSize: '1.7rem',
-    color: 'white',
-    fontWeight: '100', // extra bold
+    fontSize: '20px',
+    color: 'black',
+    fontWeight: '400', // extra bold
+    height: '600'
   };
+  const sh ={
+     color: 'red',
+     display: 'flex',
+     justifyContent: 'center',
+     alignItems: 'center',
+     flexDirection: 'column',
+     height: '400px',
+     backgroundColor: 'black', // white background
+   
+   
+  }
 
   return (
     <div style={containerStyle}>
-      <h1 style={headingStyle}>Website Restricted <p>By Developer Due to Some reason.</p></h1>
-      
-       <h2 style={newstyle} >Website is Under Maintenance.</h2>
+      <h1 style={headingStyle}>Website Restricted<p>By Developer Due to Some reason.</p></h1>
+       <h2 style={newstyle} >The Developer is working on another Project.</h2>      
+       <h3 style={sh}><a href="https://www.instagram.com/prf_priyanshu/">@prf_priyanshu</a></h3>
     </div>
   );
 }
