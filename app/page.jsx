@@ -59,7 +59,7 @@ export default function RestrictedPage() {
 
   const newstyle = {
     fontSize: '20px',
-    color: 'black',
+    color: '#0F8665',
     fontWeight: '400', // extra bold
     height: '600'
   };
@@ -78,7 +78,7 @@ export default function RestrictedPage() {
   return (
     <div style={containerStyle}>
       <h1 style={headingStyle}>Website Restricted<p>By Developer Due to Some reason.</p></h1>
-       <h2 style={newstyle} >The Developer is working on another Project.</h2>      
+       <h2 style={newstyle} >A Developer is working on another Project.</h2>      
        <h3 style={sh}><a href="https://www.instagram.com/prf_priyanshu/">@prf_priyanshu</a></h3>
     </div>
   );
