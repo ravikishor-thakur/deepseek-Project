@@ -34,64 +34,66 @@ export default function Home() {
 
   return (*/
     
-  import React from 'react';
-  
+  import { headers } from 'next/headers';
+import React from 'react';
+  //import Image from "next/image";
+  export default function RestrictedPage() {
+    const styles = {
+      container: {
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        flexDirection: 'column',
+        height: '100vh',
+        backgroundColor: 'black',
+        textAlign: 'center',
+        //fontFamily: 'Arial, sans-serif',
+        position: 'relative',
+      },
+      heading: {
+        
+        fontSize: '3rem',
+        color: 'red',
+        fontWeight: '100',
+        //marginBottom: '15px',
+      },
+      paragraph: {
+        marginBottom: '50%',
+        fontSize: '30px',
+        color: 'red',
+        fontWeight: '100',
+        marginBottom: '30px',
+      },
+      maintenance: {
+        fontSize: '1.7rem',
+        color: '#03535B',
+        fontWeight: '900',
+      },
+      bottomText: {
+        position: 'fixed',
+        bottom: '30px',
+        width: '100%',
+        textAlign: 'center',
+        fontSize: '1.2rem',
+        color: 'red',
+        fontWeight: '700',
+      },
       
-export default function RestrictedPage() {
-  const containerStyle = {
-    display: 'flex',
-    justifyContent: 'center',
-    alignItems: 'center',
-    flexDirection: 'column',
-    height: '775px',
-    backgroundColor: 'black', // white background
-    textAlign: 'center',
-  };
+    };
   
-  const headingStyle = {
-    fontSize: '30px',
-    color: 'red',
-    fontWeight: '70', // extra bold
-    marginBottom: '10px',
-  
-  };
-
-  
-
-  const newstyle = {
-    fontSize: '20px',
-    color: '#0F8665',
-    fontWeight: '400', // extra bold
-    //height: '600',
-    
-  };
-  const sh ={
-     color: 'red',
-     display: 'flex',
-     justifyContent: 'center',
-     alignItems: 'center',
-     flexDirection: 'column',
-     //height: '400px',
-     backgroundColor: 'black', // white background
-   
-   
+    return (
+      <>
+        <div style={styles.container}>
+          <h1 style={styles.heading}>The Website is Restricted
+                           <p>By Developer Due to Some reason.</p></h1>
+                 
+        
+         <br /><br /><br /> <p style={styles.maintenance}>A Developer is working on another project.</p>
+        </div>
+        <p style={styles.bottomText}><a  href="https://www.instagram.com/prf_priyanshu/">@prf_priyanshu</a></p>
+      </>
+    );
   }
-
-  return (
-    <div style={containerStyle}>
-      <h1 style={headingStyle}>Website Restricted<p>By Developer Due to Some reason.</p></h1>
-       <h2 style={newstyle} >A Developer is working on another Project.</h2>      
-       <h3 style={sh}><a href="https://www.instagram.com/prf_priyanshu/">@prf_priyanshu</a></h3>
-    </div>
-  );
-}
-
-  
-
-  
-
-
-
   
  
    /* <div>

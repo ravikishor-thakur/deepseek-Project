@@ -23,6 +23,7 @@ import qrcode from "./qrcode.png";
 import new_qr_code from "./new_qr_code.png";
 import three_dots from "./three_dots.svg";
 import new_icon from "./new_icon.svg";
+import instagram from "./instagram.png";
 
 export const assets = {
   arrow_icon,
@@ -50,4 +51,5 @@ export const assets = {
   new_qr_code,
   three_dots,
   new_icon,
+  instagram
 };
