@@ -43,7 +43,7 @@ export default function RestrictedPage() {
     justifyContent: 'center',
     alignItems: 'center',
     flexDirection: 'column',
-    height: '375px',
+    height: '775px',
     backgroundColor: '#000000', // white background
     textAlign: 'center',
   };
