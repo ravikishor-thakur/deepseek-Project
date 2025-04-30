@@ -1,4 +1,4 @@
-'use client';
+/*'use client';
 import { assets } from "@/assets/assets";
 import Message from "@/components/Message";
 import PromptBox from "@/components/PromptBox";
@@ -32,8 +32,60 @@ export default function Home() {
 
 
 
+  return (*/
+    
+  import React from 'react';
+  
+      
+export default function RestrictedPage() {
+  const containerStyle = {
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    flexDirection: 'column',
+    height: '100vh',
+    backgroundColor: '#000000', // white background
+    textAlign: 'center',
+   
+      
+    
+    
+    
+  };
+  
+  const headingStyle = {
+    fontSize: '3rem',
+    color: 'red',
+    fontWeight: '400', // extra bold
+    marginBottom: '15px',
+  };
+
+  
+
+  const newstyle = {
+    fontSize: '1.7rem',
+    color: 'white',
+    fontWeight: '100', // extra bold
+  };
+
   return (
-    <div>
+    <div style={containerStyle}>
+      <h1 style={headingStyle}>Website Restricted <p>By Developer Due to Some reason.</p></h1>
+      
+       <h2 style={newstyle} >Website is Under Maintenance.</h2>
+    </div>
+  );
+}
+
+  
+
+  
+
+
+
+  
+ 
+   /* <div>
       <div className="flex h-screen">
         <Sidebar expand={expand} setExpand={setExpand}/>
         <div className="flex-1 flex flex-col items-center justify-center px-4 pb-8 bg-[#292a2d] text-white relative">
@@ -84,4 +136,4 @@ export default function Home() {
       </div>
     </div>
   );
-}
+}*/
