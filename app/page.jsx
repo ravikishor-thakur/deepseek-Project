@@ -1,4 +1,4 @@
-/*'use client';
+'use client';
 import { assets } from "@/assets/assets";
 import Message from "@/components/Message";
 import PromptBox from "@/components/PromptBox";
@@ -32,9 +32,9 @@ export default function Home() {
 
 
 
-  return (*/
+  return (
     
-  import { headers } from 'next/headers';
+ /* import { headers } from 'next/headers';
 import React from 'react';
   //import Image from "next/image";
   export default function RestrictedPage() {
@@ -93,10 +93,10 @@ import React from 'react';
         <p style={styles.bottomText}><a  href="https://www.instagram.com/prf_priyanshu/">@prf_priyanshu</a></p>
       </>
     );
-  }
+  }*/
   
  
-   /* <div>
+    <div>
       <div className="flex h-screen">
         <Sidebar expand={expand} setExpand={setExpand}/>
         <div className="flex-1 flex flex-col items-center justify-center px-4 pb-8 bg-[#292a2d] text-white relative">
@@ -147,4 +147,4 @@ import React from 'react';
       </div>
     </div>
   );
-}*/
+}
