@@ -2,17 +2,15 @@
   "name": "deepseek",
   "version": "0.1.0",
   "private": true,
-"scripts": {
-  "dev": "next dev",
-  "start": "next start"
-},
-
-
+  "scripts": {
+    "dev": "next dev",
+    "start": "next start"
+  },
   "dependencies": {
-    "@clerk/nextjs": "^6.18.0",
+    "@clerk/nextjs": "^6.33.2",
     "axios": "^1.8.4",
     "mongoose": "^8.13.2",
-    "next": "15.3.1",
+    "next": "^15.5.4",
     "openai": "^4.96.0",
     "prismjs": "^1.30.0",
     "react": "^19.0.0",

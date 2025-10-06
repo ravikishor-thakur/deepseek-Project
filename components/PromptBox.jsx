@@ -8,7 +8,7 @@ import toast from 'react-hot-toast';
 const PromptBox = ({setIsLoading, isLoading}) => {
 
     const [prompt, setPrompt] = useState('');
-    const {user, chats, setChats, selectedChat, setSelectedChat} = useAppContext();
+    const {user, chats, setChats, selectedChat, setSelectedChat, ensureActiveChat, isChatsLoading} = useAppContext();
 
     const handleKeyDown = (e)=>{
         if(e.key === "Enter" && !e.shiftKey){
@@ -24,8 +24,9 @@ const PromptBox = ({setIsLoading, isLoading}) => {
             e.preventDefault();
             if(!user) return toast.error('Login to send message');
             if(isLoading) return toast.error('Wait for the previous prompt response');
-            if(!selectedChat){
-                toast.error('No chat selected. Please create or select a chat.');
+            const activeChat = await ensureActiveChat();
+            if(!activeChat){
+                toast.error('Setting up your chat, please try again.');
                 return;
             }
 
@@ -38,7 +39,7 @@ const PromptBox = ({setIsLoading, isLoading}) => {
                 timestamp: Date.now(),
             }
 
-            setChats((prevChats)=> prevChats.map((chat)=> chat._id === selectedChat._id ?
+            setChats((prevChats)=> prevChats.map((chat)=> chat._id === activeChat._id ?
              {
                 ...chat,
                 messages: [...(chat.messages || []), userPrompt]
@@ -50,12 +51,12 @@ const PromptBox = ({setIsLoading, isLoading}) => {
         }))
 
         const {data} = await axios.post('/api/chat/ai', {
-            chatId: selectedChat._id,
+            chatId: activeChat._id,
             prompt
         })
 
         if(data.success){
-            setChats((prevChats)=>prevChats.map((chat)=>chat._id === selectedChat._id ? {...chat, messages: [...(chat.messages || []), data.data]} : chat))
+            setChats((prevChats)=>prevChats.map((chat)=>chat._id === activeChat._id ? {...chat, messages: [...(chat.messages || []), data.data]} : chat))
 
             const message = data.data.content;
             const messageTokens = message.split(" ");
@@ -122,7 +123,7 @@ const PromptBox = ({setIsLoading, isLoading}) => {
 
             <div className='flex items-center gap-2'>
             <Image className='w-4 cursor-pointer' src={assets.pin_icon} alt=''/>
-            <button className={`${prompt ? "bg-primary" : "bg-[#71717a]"} rounded-full p-2 cursor-pointer`}>
+            <button disabled={!prompt || isChatsLoading || !selectedChat} className={`${prompt && !isChatsLoading && selectedChat ? "bg-primary" : "bg-[#71717a]"} rounded-full p-2 ${!prompt || isChatsLoading || !selectedChat ? "cursor-not-allowed" : "cursor-pointer"}`}>
                 <Image className='w-3.5 aspect-square' src={prompt ? assets.arrow_icon : assets.arrow_icon_dull} alt=''/>
             </button>
             </div>
